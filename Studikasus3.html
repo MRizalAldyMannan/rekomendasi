@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studikasus3</title>
+</head>
+<body>
+    <form>
+        <select name="perekomendasi" class="select" id="perekomendasi" onchange="berubahLabel(this)">
+            <option disabled hidden selected>ada perekomendasi?</option>
+            <option value="ada">ada</option>
+            <option value="tidak">tidak</option>
+        </select>
+        <br>
+        <br>
+        <div id="name_wrapper">
+            <label for="">Nama perekomendasi</label>
+            <br>
+            <input type="text" id="name" name="name">
+        <br>
+        <select name="nomor" id="nomor" class="select" onchange="changelabel(this)">
+            <option disabled hidden selected>kategori perekomendasi</option>
+            <br>
+            <option value="pekerjaBri">pekerja BRI</option>
+            <br>
+            <option value="purnabakti">purnabakti</option>
+            <br>
+        </select>
+        <br>
+        <div id="name_wrapper1">
+            <label for="">masukan id</label>
+            <br>
+            <input type="text" id="number" name="number">
+        </div>
+    </div>
+    </form>
+    <script>
+        function berubahLabel(e){
+        let nameWrapper = document.getElementById("name_wrapper");
+        if (e.value == "ada") { 
+            nameWrapper.style.display = "block";
+        }
+        else {
+            nameWrapper.style.display = "none";
+        }
+    }
+    function changelabel(e){
+        let name_wrapper1 = document.getElementById("name_wrapper1");
+        if (e.value == "pekerjaBri") { 
+            name_wrapper1.style.display = "block";
+        }
+        else {
+            name_wrapper1.style.display = "none";
+        }
+    }
+    </script>
+</body>
+</html>
